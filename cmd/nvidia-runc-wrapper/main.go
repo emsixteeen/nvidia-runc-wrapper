@@ -90,6 +90,11 @@ func mutateNVIDIASettings(spec *specs.Spec) {
 		}
 
 		val := kv[1]
+		if val == "none" || val == "void" {
+			newEnv = append(newEnv, v)
+			continue
+		}
+
 		if strings.HasPrefix(val, "GPU-") == false {
 			continue
 		}
