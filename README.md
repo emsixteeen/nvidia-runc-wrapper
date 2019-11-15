@@ -46,3 +46,6 @@ Google, on their NVIDIA Device Plugin does this correctly, and are not subject t
 * https://github.com/kubernetes/kubernetes/issues/59629
 * https://github.com/kubernetes/kubernetes/issues/59631
 * https://github.com/kubernetes/kubernetes/pull/59698
+
+## Credits
+Most of the plumbing in this code has been borrowed from the [NVIDIA Container Runtime package](https://github.com/NVIDIA/nvidia-container-runtime/blob/master/src/main.go).
