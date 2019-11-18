@@ -1,5 +1,9 @@
-# nvidia-runc-wrapper
+# DEPRECATED
+This project is deprecated in favor of [this](https://gitlab.com/nvidia/container-toolkit/toolkit/issues/1) and in hopes of [this](https://gitlab.com/nvidia/container-toolkit/toolkit/merge_requests/1).
 
+It remains for the sake of posterity.
+
+# nvidia-runc-wrapper
 A hyper-kludge to strip `NVIDIA_VISIBLE_DEVICES` environment variables from CRI `config.json` files, unless they are valid GPU UUIDs (where valid means UUIDs that validate).
 
 This is meant to be used in concert with the [`nvidia-container-runtime`](https://github.com/NVIDIA/nvidia-container-runtime), and utilizes the same method to invoke the runtime as the NVIDIA project. That is, it uses `syscall.Exec` (under the hood `execve(2)`, per Go documentation) to replace itself with another process - namely `nvidia-container-runtime`.
